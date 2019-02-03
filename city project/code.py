@@ -311,7 +311,7 @@ def start_game():
                 create_particles((player.rect.center))
                 tapped = True
                 player.v = -15
-            if event.type == MYEVENTTYPE and not failed:
+            if event.type == MYEVENTTYPE and not failed and tapped:
                 pspeed += 1
                 if width - (pipe_group.sprites()[-1].rect.x + 70) >= 250:
                     Pipe(width)
